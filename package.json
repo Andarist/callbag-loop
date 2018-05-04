@@ -1,6 +1,6 @@
 {
   "name": "callbag-loop",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "👜 Callbag operator that accumulates results using a feedback loop that emits one value and feeds back another to be used in the next iteration.",
   "main": "dist/callbag-loop.js",
   "module": "dist/callbag-loop.es.js",
