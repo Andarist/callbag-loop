@@ -22,7 +22,7 @@ pipe(
   loop((seed, value) => {
     seed.push(value)
     seed = seed.slice(-4)
-    return { seed, value: average(seed) }
+    return [seed, average(seed)]
   }, []),
   forEach(avg => {
     // will log 10, 15, 30, 27.5, 26.25, 58.75, 44.5, 59.5

@@ -2,18 +2,18 @@
   "name": "callbag-loop",
   "version": "1.0.0",
   "description": "👜 Callbag operator that accumulates results using a feedback loop that emits one value and feeds back another to be used in the next iteration.",
-  "main": "dist/callbag-loop.js",
-  "module": "dist/callbag-loop.es.js",
+  "main": "dist/callbag-loop.cjs.js",
+  "module": "dist/callbag-loop.esm.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "pretest": "npm run build",
     "test": "jest --env=node",
     "precommit": "lint-staged",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "prepare": "npm test"
+    "preversion": "npm test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,7 @@
   },
   "keywords": [
     "callbag",
-    "callbags",
-    "sample"
+    "callbags"
   ],
   "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
   "license": "MIT",

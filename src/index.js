@@ -9,8 +9,8 @@ export default function loop(stepper, seed) {
       }
 
       const result = stepper(seed, data)
-      seed = result.seed
-      sink(1, result.value)
+      seed = result[0]
+      sink(1, result[1])
     })
   }
 }

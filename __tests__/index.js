@@ -15,7 +15,7 @@ test('works', () => {
     loop((seed, value) => {
       seed.push(value)
       seed = seed.slice(-4)
-      return { seed, value: average(seed) }
+      return [seed, average(seed)]
     }, []),
     forEach(data => {
       actual.push(data)
